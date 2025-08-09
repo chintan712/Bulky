@@ -1,0 +1,68 @@
+﻿@model Product
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-body p-4">
+                    <h4 class="mb-4 text-center fw-semibold">Create New Product</h4>
+                   
+                    <form asp-action="Create" novalidate>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Title" class="form-control" placeholder="Product Name" />
+                            <label asp-for="Title">Title</label>
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Description" class="form-control" placeholder="Product Name" />
+                            <label asp-for="Description">Desription</label>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="ISBN" class="form-control" placeholder="Display Order" />
+                            <label asp-for="ISBN">ISBN</label>
+                            <span asp-validation-for="ISBN" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Author" class="form-control" placeholder="Author" />
+                            <label asp-for="Author">Author</label>
+                            <span asp-validation-for="Author" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="ListPrice" class="form-control" placeholder="List Price" />
+                            <label asp-for="ListPrice">List Price</label>
+                            <span asp-validation-for="ListPrice" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Price" class="form-control" placeholder="List Price" />
+                            <label asp-for="Price">Price</label>
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Price50" class="form-control" placeholder="List Price" />
+                            <label asp-for="Price50">Price50</label>
+                            <span asp-validation-for="Price50" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Price100" class="form-control" placeholder="List Price" />
+                            <label asp-for="Price100">Price100</label>
+                            <span asp-validation-for="Price100" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary  px-5">Create</button>
+                            <a asp-action="Index" class="btn btn-outline-secondary  px-5">Back to List</a>
+                        </div>
+                        
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}    
