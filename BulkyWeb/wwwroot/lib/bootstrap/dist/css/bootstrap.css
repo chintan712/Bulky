@@ -13510,11 +13510,6 @@ th {
     text-transform: uppercase;
 }
 
-.table th,
-.table td {
-    padding: 1.5rem;
-}
-
 .table-sm th,
 .table-sm td {
     padding: 0.75rem;
