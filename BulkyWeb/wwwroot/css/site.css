@@ -20,3 +20,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#tblData td, #tblData th {
+    padding: 0.35rem 0.5rem !important; /* Reduced from default 0.75rem */
+    vertical-align: middle;
+}
+
+/* Optional: Make the table more compact overall */
+#tblData {
+    font-size: 0.9rem;
+}
+
+    /* Reduce button sizes in the action column if needed */
+#tblData .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
