@@ -5,10 +5,12 @@ using Bulky.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 using Bulky.Models.ViewModels;
-
+using Bulky.Utility;
+using Microsoft.AspNetCore.Authorization;
 namespace BulkyWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    // [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -57,7 +59,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 if (file != null)
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    String productPath = Path.Combine(wwwRootPath, @"Images\Product");
+                    String productPath = Path.Combine(wwwRootPath, @"Images/Product");
 
                     if (!string.IsNullOrEmpty(ProductVM.Product.ImageUrl))
                     {
