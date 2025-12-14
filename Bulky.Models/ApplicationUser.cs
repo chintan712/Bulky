@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Bulky.Models
 {
@@ -16,6 +18,10 @@ namespace Bulky.Models
         public string? City { get; set; }
         public string? State { get; set; }
         public string? PostalCode { get; set; }
+        public int? CompanyId { get; set; }
+        [ForeignKey("CompanyId")]
+        [ValidateNever]
+        public virtual Company Company { get; set; }
       
     }
 }
