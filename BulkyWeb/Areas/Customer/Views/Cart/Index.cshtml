@@ -3,7 +3,7 @@
 <form method="post">
     <br />
     <div class="card shadow border-0">
-    <div class="card-header bg-secondary bg-gradient text-light ml-0 py-4">
+    <div class="card-header bg-dark bg-opacity-50 bg-gradient text-light ml-0 py-4">
         <div class="row px-4">
             <div class="col-6">
                 <h5 class="pt-2 text-white">
@@ -74,7 +74,7 @@
                     <ul class="list-group mb-4">
                         <li class="d-flex justify-content-between align-items-center">
                             <h5 class="text-dark fw-semibold text-uppercase"> Total (USD)</h5>
-                            <h4 class="text-dark fw-bolder">@Model.OrderTotal.ToString("c")</h4>
+                            <h4 class="text-dark fw-bolder">@Model.OrderHeader.OrderTotal.ToString("c")</h4>
                         </li>
                     </ul>
                 </div>
