@@ -1,0 +1,49 @@
+@model int
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        overflow-x: hidden;
+    }
+
+    .confirmation-box {
+        background: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+    }
+    
+</style>
+
+<div id="confetti-container"></div>
+
+<div class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="row">
+        <div class="col-12 text-center confirmation-box">
+
+            <div class="mb-3">
+                <span class="display-1 text-primary">✔</span>
+            </div>
+
+            <h1 class="text-primary fw-bold mb-3">
+                Payment Successfull!
+            </h1>
+
+            <h5 class="mb-4">
+                Your Order Number is :
+                <span class="fw-bold text-dark">@Model</span>
+            </h5>
+
+            <p class="fs-5" style="color: maroon;">
+                Your order has been placed successfully!
+            </p>
+
+            <div class="mt-4">
+                <a asp-area="Admin" asp-controller="Order" asp-action="Details" class="btn btn-primary px-4">
+                    Back to Order Details
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
