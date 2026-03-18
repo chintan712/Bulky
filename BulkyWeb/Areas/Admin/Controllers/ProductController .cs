@@ -59,7 +59,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 if (file != null)
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    String productPath = Path.Combine(wwwRootPath, @"Images/Product");
+                    String productPath = Path.Combine(wwwRootPath, "Images", "Product");
 
                     if (!string.IsNullOrEmpty(ProductVM.Product.ImageUrl))
                     {
@@ -74,7 +74,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
                     {
                         file.CopyTo(fileStream);
                     }
-                    ProductVM.Product.ImageUrl = @"\Images\Product\" + fileName;
+                    ProductVM.Product.ImageUrl = "/Images/Product/" + fileName;
                 }
 
                 if (ProductVM.Product.Id != 0)
